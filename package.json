@@ -1,0 +1,30 @@
+{
+  "name": "saas-bot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "services/*",
+    "web"
+  ],
+  "scripts": {
+    "dev": "docker compose -f docker-compose.yml -f docker-compose.dev.yml up",
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm test --workspaces --if-present",
+    "db:migrate": "npm run migrate --workspace=packages/db",
+    "lint": "echo 'TODO: setup linter'"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "^3.0.63",
+    "@ai-sdk/deepseek": "2.0.26",
+    "@ai-sdk/google": "^3.0.52",
+    "@fastify/cors": "^11.2.0",
+    "ai": "^6.0.134",
+    "dotenv": "^17.3.1",
+    "fastify": "^5.8.2"
+  }
+}

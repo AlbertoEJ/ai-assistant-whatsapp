@@ -1,0 +1,17 @@
+{
+  "name": "@bot/channels",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node --test tests/*.test.js"
+  },
+  "dependencies": {
+    "@bot/db": "*",
+    "@bot/shared": "*",
+    "node-telegram-bot-api": "^0.67.0"
+  }
+}

@@ -1,0 +1,28 @@
+node_modules/
+.env
+.env.local
+.env.*.local
+*.log
+dist/
+.next/
+coverage/
+*.tgz
+.DS_Store
+Thumbs.db
+data/uploads/
+data/logs/
+
+# Better Auth generated migrations (use our own in packages/db/src/migrations/)
+services/api/better-auth_migrations/
+
+# Database backups
+*.sql.bak
+/tmp/
+
+# IDE
+.vscode/
+.idea/
+
+# Internal docs (business strategy, costs, security details)
+docs/
+CLAUDE.md
